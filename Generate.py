@@ -38,7 +38,7 @@ parser.add_argument("--Dataset2Rule_Flag", action='store_true',
                     help='データセットからルールを作成するか')
 parser.add_argument('--DatasetPath', type=str, default='dataset/charlie',
                     help='ルール作成に必要なデータセットのパス')
-parser.add_argument('--DataSelect', type=str, default='RandomDataSelect',
+parser.add_argument('--DataSelect', type=str, default='DataSelect',
                     help='DataSelect:確率順に選択、生成、RandomDataSelect:確率に基づきランダムに選択、生成')
 generate_args = parser.parse_args()
 
