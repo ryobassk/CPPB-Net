@@ -41,6 +41,7 @@ class Corpus(object):
 
     def data_load(self, path): # csvデータの読み込み
         # ファイルパスの存在を確認
+        print(path)
         assert os.path.exists(path+'/note/') or os.path.exists(path+'/chord/')
         file_csv = glob.glob(path+'/note/*.csv') # パスの取得
         Data = []                                # データの保存先（各曲ずつ情報を収納）

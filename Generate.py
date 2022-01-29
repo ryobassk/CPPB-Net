@@ -88,8 +88,8 @@ SetKeyList = ['C', 'Db', 'D', 'Eb',
               'E', 'F', 'Gb', 'G',
               'Ab', 'A', 'Bb', 'B']
 #ルールと関数の変換関数
-RuleFunctionNameDict = {'Model_only': 'PitchRule1',
-                        'Model_SearchTree': 'PitchRule4',
+RuleFunctionNameDict = {'model_only': 'PitchRule1',
+                        'model_searchTree': 'PitchRule4',
                         }
 
 #　入力設定

@@ -66,7 +66,7 @@ $ python Train.py --data [Path of the dataset folder] --LogName [Name of the fol
 
 ```
 # Example
-$ python Train.py --data dataset/Charlie/ --LogName charlie
+$ python Train.py --data dataset/charlie/ --LogName charlie
 ```
 - The learning model is defined in . /function/train/network.py.
 
@@ -187,7 +187,7 @@ $ python Train.py --data データセットのフォルダのパス --LogName �
 
 ```
 #(例)
-$ python Train.py --data dataset/Charlie/ --LogName charlie
+$ python Train.py --data dataset/charlie/ --LogName charlie
 ```
 - 学習モデルは./function/train/network.pyで定義。
 
