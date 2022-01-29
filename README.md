@@ -116,7 +116,7 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
 ## Generated Results
 
-The results of the paper generation are saved in . /data_generate/sample/ in xml format.
+The results of the paper generation are saved in . /data_generate/SampleGenerateData/ in xml format.
 
 ## Authors
 Ryo Ogasawara
@@ -242,7 +242,7 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
             深層学習のモデルに木探索を組み合わせて、音楽を生成。
 
 ## 生成結果
-論文の生成結果は./data_generate/sample/にxml形式で保存されています。
+論文の生成結果は./data_generate/SampleGenerateData/にxml形式で保存されています。
 
 ## Authors
 Ryo Ogasawara
