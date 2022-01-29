@@ -90,7 +90,7 @@ $ python Generate.py --PathName [Folder name for learning results] --ModelName [
 # Example1
 $ python Generate.py --PathName sample --ModelName sample --RuleName model_searchTree
 
-# Example2
+# Example2(When creating rules with your own data set.)
 $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --DatasetPath dataset/test --RuleName model_searchTree
 ```
 - The generated results are saved in . /data_generate
@@ -217,7 +217,7 @@ $ python Generate.py --PathName 学習結果のフォルダ名 --ModelName 出�
 #(例1)
 $ python Generate.py --PathName sample --ModelName sample --RuleName model_searchTree
 
-#(例2)
+#(例2:独自のデータセットでルールを作成するとき)
 $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --DatasetPath dataset/test --RuleName model_searchTree
 
 ```
