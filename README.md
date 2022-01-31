@@ -156,7 +156,7 @@ The results of the paper generation are saved in . /data_generate/SampleGenerate
 
 |  Model |  Chords 1 |  Chords 2  | 
 | :---: | :---: | :---: |
-|  CPPB-Net+SearchTree |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
+|  CPPB-Net+SearchTree |  <audio src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
 |  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
 |  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
 
