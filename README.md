@@ -160,6 +160,10 @@ The results of the paper generation are saved in . /data_generate/SampleGenerate
 |  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
 |  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
 
+<audio controls>
+    <source src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3">
+    <source src="https://raw.githubusercontent.com/ytyaru/Audio.Sample.201708031714/master/20170803/wav/CMajor.wav">
+</audio>
 
 ## Authors
 Ryo Ogasawara
