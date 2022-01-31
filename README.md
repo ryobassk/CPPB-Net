@@ -147,6 +147,16 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
         
             Notes are randomly selected based on the output values of the model.
 
+    - --Key（default:All）
+        
+        Input Example　C, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B, All
+
+
+    - --ChordProgression （default:All）
+        
+        Input Example　Two_Five_One, Autumn_Leaves, Just_The_Two_Of_Us, Blues1, Blues2, All
+
+
 
 ## Generated Results
 
@@ -319,6 +329,15 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
         - RandomDataSelect
         
             音符をモデルの出力値を元にランダムで選択。
+
+    - --Key 生成するキー（デフォルト:All）
+        
+        入力値　C, Db, D, Eb, E, F, Gb, G, Ab, A, Bb, B, Allのいずれか  
+
+
+    - --ChordProgression 生成するコード進行（デフォルト:All）
+        
+        入力値　Two_Five_One, Autumn_Leaves, Just_The_Two_Of_Us, Blues1, Blues2, All　のいずれか   
 
          
 
