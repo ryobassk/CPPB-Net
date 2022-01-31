@@ -156,24 +156,11 @@ The results of the paper generation are saved in . /data_generate/SampleGenerate
 
 |  Model |  Chords 1 |  Chords 2  | 
 | :---: | :---: | :---: |
-|  CPPB-Net+SearchTree |  <audio src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
-|  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
-|  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
+|  CPPB-Net+SearchTree |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju1.mp3) | 
+|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3)  | 
+|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3) | 
 
-<audio controls>
-    <source src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3">
-    <source src="https://raw.githubusercontent.com/ytyaru/Audio.Sample.201708031714/master/20170803/wav/CMajor.wav">
-</audio>
-<audio src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>
-<figure>
-    <figcaption>Listen to the T-Rex:</figcaption>
-    <audio
-        controls
-        src="https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
+
 
 
 ## Authors
@@ -343,11 +330,9 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
 |  モデル名 |  コード進行１ |  コード進行２  | 
 | :---: | :---: | :---: |
-|  CPPB-Net+木探索 |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
-|  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
-|  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
-
-
+|  CPPB-Net+木探索 |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju1.mp3) | 
+|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3)  | 
+|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3) | 
 
 
 ## Authors
