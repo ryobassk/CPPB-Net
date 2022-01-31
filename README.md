@@ -156,6 +156,8 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
         
         Input Example　Two_Five_One, Autumn_Leaves, Just_The_Two_Of_Us, Blues1, Blues2, All
 
+    - --ChordProgressNum Number of repetitions of the chord progression to generate (default: 1)
+
 
 
 ## Generated Results
@@ -166,9 +168,9 @@ The results of the paper generation are saved in . /data_generate/SampleGenerate
 
 |  Model |  Chords 1 |  Chords 2  | 
 | :---: | :---: | :---: |
-|  CPPB-Net+SearchTree |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju1.mp3) | 
-|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3)  | 
-|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3) | 
+|  CPPB-Net+SearchTree |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju2.mp3) | 
+|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju2.mp3)  | 
+|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju2.mp3) | 
 
 
 
@@ -338,6 +340,8 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
     - --ChordProgression 生成するコード進行（デフォルト:All）
         
         入力値　Two_Five_One, Autumn_Leaves, Just_The_Two_Of_Us, Blues1, Blues2, All　のいずれか   
+    
+    - --ChordProgressNum 生成するコード進行の繰り返し回数（デフォルト:1）
 
          
 
@@ -349,9 +353,9 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
 |  モデル名 |  コード進行１ |  コード進行２  | 
 | :---: | :---: | :---: |
-|  CPPB-Net+木探索 |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju1.mp3) | 
-|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3)  | 
-|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3) | 
+|  CPPB-Net+木探索 |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/TreeCPPB_Ju2.mp3) | 
+|  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju2.mp3)  | 
+|  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju2.mp3) | 
 
 
 ## Authors
