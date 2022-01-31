@@ -13,7 +13,7 @@ import function.generate.SetChord as SetChord
 import function.generate.SetMusic as SetMusic
 import function.generate.Dataset2Rule as Dataset2Rule
 
-parser = argparse.ArgumentParser(description='SSMG')
+parser = argparse.ArgumentParser(description='CPPB')
 parser.add_argument('--StartChordNum', type=int, default=1,
                     help='現在の小節から何小節前までのコードを使用するか')
 parser.add_argument('--EndChordNum', type=int, default=1,
@@ -30,7 +30,7 @@ parser.add_argument('--ChordProgressNum', type=int, default=1,
                     help='特定のコード進行を何回繰り返すか')
 parser.add_argument('--PathName', type=str, default='sample',
                     help='読み込む学習済みモデルのフォルダ名')
-parser.add_argument('--ModelName', type=str, default='SSMG',
+parser.add_argument('--ModelName', type=str, default='CPPB',
                     help='生成結果の名前（ファイル名）')
 parser.add_argument('--Logpath', type=str, default='log/',
                     help='読み込む学習済みモデルのフォルダのパス')
@@ -44,6 +44,10 @@ parser.add_argument('--DatasetPath', type=str, default='dataset/charlie',
                     help='ルール作成に必要なデータセットのパス')
 parser.add_argument('--DataSelect', type=str, default='DataSelect',
                     help='DataSelect:確率順に選択、生成、RandomDataSelect:確率に基づきランダムに選択、生成')
+parser.add_argument('--Key', type=str, default='C',
+                    help='生成するキー')
+parser.add_argument('--ChordProgression', type=str, default='Two_Five_One',
+                    help='生成するキー')
 generate_args = parser.parse_args()
 
 #パラメータ
@@ -58,19 +62,26 @@ Logpath = generate_args.Logpath +'/{}/'.format(PathName)   # 読み込む学習�
 Outpath = generate_args.Outpath + '/{}/{}/'.format(
                                 PathName, RuleName)        # 生成結果の出力先フォルダのパス
 os.makedirs(Outpath, exist_ok=True)
+if generate_args.Key== 'All':
+    KeyList = ['C', 'Db', 'D', 'Eb',
+            'E', 'F', 'Gb', 'G',
+            'Ab', 'A', 'Bb', 'B']                   # 生成するキー
 
-KeyList = ['C', 'Db', 'D', 'Eb',
-           'E', 'F', 'Gb', 'G',
-           'Ab', 'A', 'Bb', 'B']                   # 生成するキー
-ChordProgressList = ['Two_Five_One',
-                     'Autumn_Leaves',
-                     'Just_The_Two_Of_Us',
-                     'Blues1',
-                     'Blues2']                     # 生成する音楽のコード進行
+else:
+    KeyList = [generate_args.Key]                 # 生成するキー
+
+if generate_args.ChordProgression == 'All':
+    ChordProgressList = ['Two_Five_One',
+                        'Autumn_Leaves',
+                        'Just_The_Two_Of_Us',
+                        'Blues1',
+                        'Blues2']                     # 生成する音楽のコード進行
+else:
+    ChordProgressList = [generate_args.ChordProgression]
 
 # 学習時のパラメータを取得
 path_model = '{}/model.pt'.format(Logpath)
-parser = argparse.ArgumentParser(description='SSMG')
+parser = argparse.ArgumentParser(description='CPPB')
 with open('{}/args.pickle'.format(Logpath), mode='rb') as f:
     args = pickle.load(f)
 with open('{}/Dictionary.pickle'.format(Logpath), mode='rb') as f:
