@@ -152,6 +152,15 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
 The results of the paper generation are saved in . /data_generate/SampleGenerateData/ in xml format.
 
+## Comparison of generated results
+
+|  Model |  Chords 1 |  Chords 2  | 
+| :---: | :---: | :---: |
+|  CPPB-Net+SearchTree |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
+|  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
+|  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
+
+
 ## Authors
 Ryo Ogasawara
 
@@ -314,6 +323,17 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
 ## 生成結果
 論文の生成結果は./data_generate/SampleGenerateData/にxml形式で保存されています。
+
+## 生成結果の比較
+
+|  モデル名 |  コード進行１ |  コード進行２  | 
+| :---: | :---: | :---: |
+|  CPPB-Net+木探索 |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>  |  <audio src="data_generate/SampleGenerateData/mp3/TreeCPPB_Au1.mp3" controls></audio>   | 
+|  CPPB-Net  |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3" controls></audio> |  <audio src="data_generate/SampleGenerateData/mp3/CPPB_Ju1.mp3" controls></audio> | 
+|  BeBopNet |  <audio src="data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3" controls></audio>  | <audio src="data_generate/SampleGenerateData/mp3/Bebop_Ju1.mp3" controls></audio>| 
+
+
+
 
 ## Authors
 Ryo Ogasawara
