@@ -101,3 +101,6 @@ class DataSave(object):
             GenerateData.write('musicxml', '{}/{}.xml'.format(Path, Name))
         elif Type == 'mid':  # MIDIファイルで保存
             GenerateData.write('midi', '{}/{}.mid'.format(Path, Name))
+        elif Type == 'both':  # MIDIファイルで保存
+            GenerateData.write('musicxml', '{}/{}.xml'.format(Path, Name))
+            GenerateData.write('midi', '{}/{}.mid'.format(Path, Name))

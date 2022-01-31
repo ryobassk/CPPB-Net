@@ -22,9 +22,13 @@ parser.add_argument('--StartUseMidiNum', type=int, default=0,
                     help='使用する音名の範囲(最低音)')
 parser.add_argument('--EndUseMidiNum', type=int, default=127,
                     help='使用する音名の範囲(最高音)')
+parser.add_argument('--OutputExtension', type=str, default='xml',
+                    help='出力する拡張子')
+parser.add_argument('--Tempo', type=int, default=160,
+                    help='生成する楽曲のBPM')
 parser.add_argument('--ChordProgressNum', type=int, default=1,
                     help='特定のコード進行を何回繰り返すか')
-parser.add_argument('--PathName', type=str, default='charlie',
+parser.add_argument('--PathName', type=str, default='sample',
                     help='読み込む学習済みモデルのフォルダ名')
 parser.add_argument('--ModelName', type=str, default='SSMG',
                     help='生成結果の名前（ファイル名）')
@@ -32,8 +36,8 @@ parser.add_argument('--Logpath', type=str, default='log/',
                     help='読み込む学習済みモデルのフォルダのパス')
 parser.add_argument('--Outpath', type=str, default='data_generate/',
                     help='生成結果の出力先フォルダのパス')
-parser.add_argument('--RuleName', type=str, default='Model_SearchTree',
-                    help='生成するルール(Model_only or Model_SearchTree)')
+parser.add_argument('--RuleName', type=str, default='model_searchTree',
+                    help='生成するルール(model_only or model_searchTree)')
 parser.add_argument("--Dataset2Rule_Flag", action='store_true',
                     help='データセットからルールを作成するか')
 parser.add_argument('--DatasetPath', type=str, default='dataset/charlie',
@@ -182,7 +186,9 @@ for musicidx, (Data, Name) in enumerate(zip(InputList, NameList)):
 
     measure = InputChord.measure                          # 生成する楽曲の小節数
     TreeSearch = Tree.TreeSearch(model, InputChord, Data2Tensor, DataSelect, DataSave, 
-                                 measure, Name, Outpath)  # 木探索による生成の設定
+                                 measure, Name, Outpath, 
+                                 OutputExtension=generate_args.OutputExtension,
+                                 Tempo=generate_args.Tempo)  # 木探索による生成の設定
     Generate_root = TreeSearch.generate(
         Pitch=Pitch, Duration=Duration, Offset=Tick)      # 木探索による生成
     # for pre, fill, node in RenderTree(Generate_root):

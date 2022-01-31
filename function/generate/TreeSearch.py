@@ -11,7 +11,7 @@ def repackage_hidden(h):  # 最初の特徴量をコピーして切り離す
         return tuple(repackage_hidden(v) for v in h)
 
 class TreeSearch():
-    def __init__(self, model, set_chord, data2tensor, rule, datasave, measure, name, outpath):
+    def __init__(self, model, set_chord, data2tensor, rule, datasave, measure, name, outpath, OutputExtension='xml', Tempo=160):
         self.model = model
         # self.rule = rule
         self.set_chord = set_chord
@@ -21,6 +21,8 @@ class TreeSearch():
         self.measure = measure
         self.name = name
         self.outpath = outpath
+        self.OutputExtension = OutputExtension
+        self.Tempo = Tempo
         os.makedirs('{}/csv/'.format(outpath), exist_ok=True)
         self.flag = False
 
@@ -69,7 +71,7 @@ class TreeSearch():
                                    ['DurationIdx:']+SaveDurationIdxListNode+[DurationIdx]])
                 df.to_csv('{}/csv/{}.csv'.format(self.outpath, self.name))
                 self.datasave.SetNote(PitchListNode+[NextPitch], DurationListNode)
-                self.datasave.Output(self.name, self.outpath, Musescore=False)
+                self.datasave.Output(self.name, self.outpath, Type=self.OutputExtension, Tempo=self.Tempo, Musescore=False)
                 break
         for idx, child in enumerate(children):
             NextPitch = NextPitchList[idx]

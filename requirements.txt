@@ -4,3 +4,5 @@ anytree==2.8.0
 pretty-midi==0.2.9
 music21==7.1.0
 torch==1.7.1
+scikit-learn==0.23.2
+pandas==1.1.3
