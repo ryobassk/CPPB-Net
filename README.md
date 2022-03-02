@@ -1,8 +1,7 @@
 # CPBB-Net
 ## 動画
 [![](https://github.com/ryobassk/CPPB-Net/blob/master/Model_Figure.png)](http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4)
-[![](https://img.youtube.com/vi/a3LutlLru5k/0.jpg)](https://www.youtube.com/watch?v=a3LutlLru5k)
-
+http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4
 # CPBB-Net (English)
 This repository contains PyTorch's implementation of CPBB-Net. It also contains the following
 
