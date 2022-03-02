@@ -1,7 +1,3 @@
-# CPBB-Net
-## 動画
-[![](https://github.com/ryobassk/CPPB-Net/blob/master/Model_Figure.png)](http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4)
-http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4
 # CPBB-Net (English)
 This repository contains PyTorch's implementation of CPBB-Net. It also contains the following
 
@@ -176,8 +172,8 @@ The results of the paper generation are saved in . /data_generate/SampleGenerate
 |  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju2.mp3)  | 
 |  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju2.mp3) | 
 
-
-
+## Video
+http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4
 
 ## Authors
 Ryo Ogasawara
@@ -361,6 +357,9 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 |  CPPB-Net  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/CPPB_Ju2.mp3)  | 
 |  BeBopNet |  [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Au1.mp3)  | [リンク](https://github.com/ryobassk/CPPB-Net/blob/master/data_generate/SampleGenerateData/mp3/Bebop_Ju2.mp3) | 
 
+
+## 動画
+http://navi.cs.kumamoto-u.ac.jp/public/IEEEAccess_ogasawara.mp4
 
 ## Authors
 Ryo Ogasawara
