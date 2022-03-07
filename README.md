@@ -158,7 +158,20 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
 
     - --ChordProgressNum Number of repetitions of the chord progression to generate (default: 1)
 
+## Free generation by model
+Generates music with the specified chord progression. Parameters are the same as Generate.py. When executed, an input screen will appear, so follow the instructions on the screen.
+```
+$ python FreeGenerate.py --PathName [Folder name for learning results] --ModelName [Folder name for output] --DatasetPath [Path of the dataset used for training.] --RuleName [Rule name at generation]
+```
 
+```
+#(例)
+$ python FreeGenerate.py --PathName sample --ModelName sample --RuleName model_searchTree
+
+
+
+```
+- The generated result is . FreeGenerateMusic**.xml or FreeGenerateMusic**.mid in /data_generate/.
 
 ## Generated Results
 
@@ -343,7 +356,23 @@ $ python Generate.py --PathName sample --ModelName sample --Dataset2Rule_Flag --
     
     - --ChordProgressNum 生成するコード進行の繰り返し回数（デフォルト:1）
 
-         
+
+## モデルによる自由な生成
+指定したコード進行で音楽を生成する。パラメータはGenerate.pyと同じ。実行すると入力画面が出てくるので、画面にしたがって入力。
+```
+$ python FreeGenerate.py --PathName 学習結果のフォルダ名 --ModelName 出力するフォルダ名 --DatasetPath 学習に使用したデータセットのパス --RuleName 生成時のルール名
+```
+
+```
+#(例)
+$ python FreeGenerate.py --PathName sample --ModelName sample --RuleName model_searchTree
+
+
+
+```
+- 生成結果は./data_generate/にFreeGenerateMusic**.xml、もしくはFreeGenerateMusic**.midの名前で保存
+
+
 
 
 ## 生成結果

@@ -1,5 +1,6 @@
 # ライブラリ
 import music21 as m21
+import pretty_midi
 import torch
 
 #　データの変換
@@ -51,7 +52,8 @@ class DataSave(object):
         self.ChordClass2Key = ['C', 'D-', 'D', 'E-',
                                'E', 'F', 'G-', 'G', 'A-', 'A', 'B-', 'B']
         self.ChordKind2Kind = {'dominant-seventh': '7', 'minor': 'm',
-                               'major': '', 'half-diminished-seventh': 'm7b5'}
+                               'major': '', 'half-diminished-seventh': 'm7b5',
+                               'major-sixth': '6', 'diminished':'dim'}
 
     def SetChord(self, ChordList):
         for ChordRoot, ChordKind in zip(ChordList[0], ChordList[1]):
@@ -101,6 +103,45 @@ class DataSave(object):
             GenerateData.write('musicxml', '{}/{}.xml'.format(Path, Name))
         elif Type == 'mid':  # MIDIファイルで保存
             GenerateData.write('midi', '{}/{}.mid'.format(Path, Name))
-        elif Type == 'both':  # MIDIファイルで保存
+        elif Type == 'both':  # MIDｒｔIファイルで保存
             GenerateData.write('musicxml', '{}/{}.xml'.format(Path, Name))
             GenerateData.write('midi', '{}/{}.mid'.format(Path, Name))
+
+    def XML2MIDI(self, DATAXML, Tempo):  # xmlからコード情報を除くMIDIを作成
+        generateData1 = m21.stream.Stream()  # 楽譜オブジェクトの生成
+        generateData1.append(m21.clef.TrebleClef())  # ト音記号に設定
+        generateData1.append(m21.meter.TimeSignature('4/4'))  # 四分の四に設定
+        generateData2 = m21.stream.Stream()  # 楽譜オブジェクトの生成
+        generateData2.append(m21.clef.TrebleClef())  # ト音記号に設定
+        generateData2.append(m21.meter.TimeSignature('4/4'))  # 四分の四に設定
+        musicdata = m21.converter.parse(DATAXML)
+        for thisNote in musicdata.flat.notesAndRests:  # musicdata.flat.notes:
+            if thisNote.isNote:
+                note = m21.note.Note(
+                    thisNote.pitch.midi, quarterLength=thisNote.duration.quarterLength, offset=thisNote.offset, velocity=100)
+                generateData1.append(note)
+            elif thisNote.isRest:
+                note = m21.note.Rest(
+                    quarterLength=thisNote.duration.quarterLength, offset=thisNote.offset)
+                generateData1.append(note)
+            elif thisNote.isChord:
+                generateData2.append(thisNote)
+        generateData1.makeMeasures(inPlace=True)  # 小節追加
+        generateData1.write('midi', 'Test1.mid')
+        generateData2.makeMeasures(inPlace=True)  # 小節追加
+        generateData2.write('midi', 'Test2.mid')
+        self.Midiout('Test1.mid', 'Test2.mid', Tempo, 'Test3.mid')
+    
+    def Midiout(self, Datamelo, Datachord, Tempo, OutMidi):
+        #midiの作成、４分音符を480tick、BPM=160と設定
+        musicdata = pretty_midi.PrettyMIDI(resolution=480,
+                                            initial_tempo=Tempo)
+        midi_data1 = pretty_midi.PrettyMIDI(Datamelo).instruments
+        midi_data2 = pretty_midi.PrettyMIDI(Datamelo).instruments
+        print(midi_data1)
+
+        #各楽器の情報をMIDIに格納
+        musicdata.instruments.append(midi_data1)
+        musicdata.instruments.append(midi_data2)
+        musicdata.write('cello-C-chord.mid')
+        a=1

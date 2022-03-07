@@ -22,7 +22,7 @@ parser.add_argument('--StartUseMidiNum', type=int, default=0,
                     help='使用する音名の範囲(最低音)')
 parser.add_argument('--EndUseMidiNum', type=int, default=127,
                     help='使用する音名の範囲(最高音)')
-parser.add_argument('--OutputExtension', type=str, default='xml',
+parser.add_argument('--OutputExtension', type=str, default='mid',
                     help='出力する拡張子')
 parser.add_argument('--Tempo', type=int, default=160,
                     help='生成する楽曲のBPM')

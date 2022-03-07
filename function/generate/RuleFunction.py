@@ -76,6 +76,14 @@ class DataSelect(object):
             ChordTone = [1, 0, 0, 1,
                          0, 0, 1, 0,
                          0, 0, 1, 0]
+        elif ChordKind == 'major-sixth':
+            ChordTone = [1, 0, 0, 0,
+                         1, 0, 0, 1,
+                         0, 1, 0, 0]
+        elif ChordKind == 'diminished':
+            ChordTone = [1, 0, 0, 1,
+                         0, 0, 1, 0,
+                         0, 1, 0, 0]
         ChordTone = (np.roll(ChordTone, ChordRoot)).tolist()
         ChordTone = self.ChordToken(ChordTone)
         return ChordTone
@@ -205,10 +213,7 @@ class RandomDataSelect(object):
             OutPitch[-1], descending=True).values, torch.sort(OutDur[-1], descending=True).values
         PotentialPitch, PotentialDuration = self.id2word(PotentialPitch, PotentialDuration)
         NowOffset = Offset + InDuration
-        #　音価の候補から選択
-        Duration, DurationIdx = self.DurationRandomchoice(PotentialDuration, PotentialDuration_value, NowOffset)
-        if Duration==None:return [],[],[],[],[]
-        PitchRule = getattr(self, self.rulename)
+        self.UsedChordKindList = ['dim', '7', 'm7b5', 'M', 'm', '6']
         PotentialPitchIdx = (np.array(range(0, len(PotentialPitch), 1))).tolist()
         PotentialPitch, PotentialPitchIdx = self.SetRangeInstrument(PotentialPitch, PotentialPitchIdx)
         
@@ -313,6 +318,14 @@ class RandomDataSelect(object):
             ChordTone = [1, 0, 0, 1,
                          0, 0, 1, 0,
                          0, 0, 1, 0]
+        elif ChordKind == 'major-sixth':
+            ChordTone = [1, 0, 0, 0,
+                         1, 0, 0, 1,
+                         0, 1, 0, 0]
+        elif ChordKind == 'diminished':
+            ChordTone = [1, 0, 0, 1,
+                         0, 0, 1, 0,
+                         0, 1, 0, 0]
         ChordTone = (np.roll(ChordTone, ChordRoot)).tolist()
         ChordTone = self.ChordToken(ChordTone)
         return ChordTone
@@ -499,7 +512,8 @@ class DataSave(object):
         self.ChordClass2Key = ['C', 'D-', 'D', 'E-',
                                'E', 'F', 'G-', 'G', 'A-', 'A', 'B-', 'B']
         self.ChordKind2Kind = {'dominant-seventh': '7', 'minor': 'm',
-                               'major': '', 'half-diminished-seventh': 'm7b5'}
+                               'major': '', 'half-diminished-seventh': 'm7b5',
+                               'diminished': 'dim', 'major-sixth':'6'}
 
     def SetChord(self, ChordList):
         for ChordRoot, ChordKind in zip(ChordList[0], ChordList[1]):
