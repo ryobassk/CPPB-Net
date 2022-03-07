@@ -165,11 +165,8 @@ $ python FreeGenerate.py --PathName [Folder name for learning results] --ModelNa
 ```
 
 ```
-#(例)
+# Example
 $ python FreeGenerate.py --PathName sample --ModelName sample --RuleName model_searchTree
-
-
-
 ```
 - The generated result is . FreeGenerateMusic**.xml or FreeGenerateMusic**.mid in /data_generate/.
 
@@ -366,10 +363,8 @@ $ python FreeGenerate.py --PathName 学習結果のフォルダ名 --ModelName �
 ```
 #(例)
 $ python FreeGenerate.py --PathName sample --ModelName sample --RuleName model_searchTree
-
-
-
 ```
+
 - 生成結果は./data_generate/にFreeGenerateMusic**.xml、もしくはFreeGenerateMusic**.midの名前で保存
 
 
